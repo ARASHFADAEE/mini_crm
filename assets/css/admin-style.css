@@ -1,0 +1,452 @@
+/* Admin styles for Mini CRM add contact form and contact list */
+.wrap .mini-crm-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mini-crm-form h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #23282d;
+    text-align: center;
+}
+
+.mini-crm-form p {
+    margin: 15px 0;
+}
+
+.mini-crm-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.mini-crm-form input[type="text"],
+.mini-crm-form input[type="tel"],
+.mini-crm-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.mini-crm-form input[type="text"]:focus,
+.mini-crm-form input[type="tel"]:focus,
+.mini-crm-form select:focus {
+    border-color: #0073aa;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 115, 170, 0.3);
+}
+
+.mini-crm-form input:invalid {
+    border-color: #dc3232;
+}
+
+.mini-crm-form select {
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="%23333" d="M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z"/></svg>') no-repeat right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
+}
+
+.mini-crm-form input[type="submit"] {
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.mini-crm-form input[type="submit"]:hover {
+    background: #005177;
+}
+
+/* Styles for contact list table */
+.wrap .mini-crm-table-wrap {
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+.mini-crm-table-wrap .wp-list-table {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mini-crm-table-wrap th {
+    background: #f1f1f1;
+    color: #23282d;
+    font-weight: 600;
+    padding: 12px;
+    text-align: right;
+}
+
+.mini-crm-table-wrap td {
+    padding: 12px;
+    vertical-align: middle;
+    color: #333;
+}
+
+.mini-crm-table-wrap tr:hover {
+    background: #f9f9f9;
+}
+
+.mini-crm-table-wrap select {
+    width: 100%;
+    max-width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="%23333" d="M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z"/></svg>') no-repeat right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
+    transition: border-color 0.3s;
+}
+
+.mini-crm-table-wrap select:focus {
+    border-color: #0073aa;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 115, 170, 0.3);
+}
+
+/* Styles for notification message */
+.mini-crm-notification {
+    position: fixed;
+    top: 40px;
+    right: 50%;
+    background: #46b450;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 14px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.mini-crm-notification.hide {
+    opacity: 0;
+}
+
+@media (max-width: 782px) {
+    .mini-crm-form {
+        padding: 15px;
+    }
+
+    .mini-crm-form h1 {
+        font-size: 20px;
+    }
+
+    .mini-crm-form input[type="text"],
+    .mini-crm-form input[type="tel"],
+    .mini-crm-form select {
+        font-size: 14px;
+    }
+
+    .mini-crm-table-wrap .wp-list-table {
+        font-size: 14px;
+    }
+
+    .mini-crm-table-wrap th,
+    .mini-crm-table-wrap td {
+        padding: 8px;
+    }
+
+    .mini-crm-table-wrap select {
+        max-width: 150px;
+        font-size: 13px;
+    }
+
+    .mini-crm-notification {
+        top: 10px;
+        right: 10px;
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+}
+
+
+/* Frontend styles for Mini CRM contact form */
+.mini-crm-contact-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 0;
+    background: transparent;
+    border: none;
+    direction: rtl;
+    font-family: 'Tahoma', sans-serif;
+}
+
+.mini-crm-contact-form p {
+    margin: 10px 0;
+    padding: 0;
+}
+
+.mini-crm-contact-form label {
+    display: block;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 14px;
+}
+
+.mini-crm-contact-form input[type="text"],
+.mini-crm-contact-form input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.mini-crm-contact-form input[type="text"]:focus,
+.mini-crm-contact-form input[type="tel"]:focus {
+    border-color: #ff6200;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 98, 0, 0.3);
+}
+
+.mini-crm-contact-form input:invalid {
+    border-color: #dc3232;
+}
+
+.mini-crm-contact-form input[type="submit"] {
+    background: #ff6200;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.mini-crm-contact-form input[type="submit"]:hover {
+    background: #e65c00;
+}
+
+@media (max-width: 600px) {
+    .mini-crm-contact-form {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .mini-crm-contact-form input[type="text"],
+    .mini-crm-contact-form input[type="tel"],
+    .mini-crm-contact-form input[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+
+/* Styles for filter */
+.mini-crm-filter {
+    margin: 20px 0;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.mini-crm-filter select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="%23333" d="M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z"/></svg>') no-repeat right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
+    transition: border-color 0.3s;
+}
+
+.mini-crm-filter select:focus {
+    border-color: #0073aa;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 115, 170, 0.3);
+}
+
+@media (max-width: 782px) {
+    .mini-crm-form {
+        padding: 15px;
+    }
+
+    .mini-crm-form h1 {
+        font-size: 20px;
+    }
+
+    .mini-crm-form input[type="text"],
+    .mini-crm-form input[type="tel"],
+    .mini-crm-form select {
+        font-size: 14px;
+    }
+
+    .mini-crm-table-wrap .wp-list-table {
+        font-size: 14px;
+    }
+
+    .mini-crm-table-wrap th,
+    .mini-crm-table-wrap td {
+        padding: 8px;
+    }
+
+    .mini-crm-table-wrap select {
+        max-width: 150px;
+        font-size: 13px;
+    }
+
+    .mini-crm-notification {
+        top: 10px;
+        right: 10px;
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+
+    .mini-crm-filter {
+        padding: 8px;
+    }
+
+    .mini-crm-filter select {
+        font-size: 13px;
+    }
+}
+
+
+/* Styles for pagination */
+.mini-crm-pagination {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.mini-crm-pagination a,
+.mini-crm-pagination span {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #0073aa;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.mini-crm-pagination a:hover {
+    background: #f1f1f1;
+}
+
+.mini-crm-pagination .current {
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+@media (max-width: 782px) {
+    .mini-crm-form {
+        padding: 15px;
+    }
+
+    .mini-crm-form h1 {
+        font-size: 20px;
+    }
+
+    .mini-crm-form input[type="text"],
+    .mini-crm-form input[type="tel"],
+    .mini-crm-form select {
+        font-size: 14px;
+    }
+
+    .mini-crm-table-wrap .wp-list-table {
+        font-size: 14px;
+    }
+
+    .mini-crm-table-wrap th,
+    .mini-crm-table-wrap td {
+        padding: 8px;
+    }
+
+    .mini-crm-table-wrap select {
+        max-width: 150px;
+        font-size: 13px;
+    }
+
+    .mini-crm-notification {
+        top: 10px;
+        right: 10px;
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+
+    .mini-crm-filter {
+        padding: 8px;
+    }
+
+    .mini-crm-filter select {
+        font-size: 13px;
+    }
+
+    .mini-crm-pagination a,
+    .mini-crm-pagination span {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}
+
+/* Styles for search */
+.mini-crm-search {
+    margin: 20px 0;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.mini-crm-search input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.mini-crm-search input[type="text"]:focus {
+    border-color: #0073aa;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 115, 170, 0.3);
+}
+
+.mini-crm-search .search-icon {
+    padding: 13px 12px;
+    background: #e1e1e1;
+    color: #fff;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.mini-crm-search .search-icon:hover {
+    background: #005177;
+}

@@ -1,0 +1,153 @@
+
+
+/* Frontend styles for Mini CRM contact form */
+.mini-crm-contact-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 0;
+    background: transparent;
+    border: none;
+    direction: rtl;
+    font-family: 'Tahoma', sans-serif;
+}
+
+.mini-crm-contact-form p {
+    margin: 10px 0;
+    padding: 0;
+}
+
+.mini-crm-contact-form label {
+    display: block;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 14px;
+}
+
+.mini-crm-contact-form input[type="text"],
+.mini-crm-contact-form input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.mini-crm-contact-form input[type="text"]:focus,
+.mini-crm-contact-form input[type="tel"]:focus {
+    border-color: #ff6200;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 98, 0, 0.3);
+}
+
+.mini-crm-contact-form input:invalid {
+    border-color: #dc3232;
+}
+
+.mini-crm-contact-form input[type="submit"] {
+    background: #ff6200;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.mini-crm-contact-form input[type="submit"]:hover {
+    background: #e65c00;
+}
+
+@media (max-width: 600px) {
+    .mini-crm-contact-form {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .mini-crm-contact-form input[type="text"],
+    .mini-crm-contact-form input[type="tel"],
+    .mini-crm-contact-form input[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+/* Styles for success message */
+.mini-crm-success {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background: #46b450;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.mini-crm-success.show {
+    display: block;
+}
+
+.mini-crm-success.hide {
+    opacity: 0;
+}
+
+
+/* Mini CRM Frontend Styles */
+.mini-crm-contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.mini-crm-contact-form p {
+    margin-bottom: 15px;
+}
+.mini-crm-contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+.mini-crm-contact-form input[type="text"],
+.mini-crm-contact-form input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+}
+.mini-crm-contact-form input[type="submit"] {
+    background: #ff6200;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.mini-crm-contact-form input[type="submit"]:hover {
+    background: #005177;
+}
+.mini-crm-success {
+    color: green;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.mini-crm-success.show {
+    opacity: 1;
+}
+.mini-crm-success.hide {
+    opacity: 0;
+}
+.mini-crm-error {
+    color: red;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.mini-crm-error.show {
+    opacity: 1;
+}
+.mini-crm-error.hide {
+    opacity: 0;
+}
