@@ -1,5 +1,4 @@
 
-
 /* Frontend styles for Mini CRM contact form */
 .mini-crm-contact-form {
     max-width: 400px;
@@ -8,7 +7,7 @@
     background: transparent;
     border: none;
     direction: rtl;
-    font-family: 'Tahoma', sans-serif;
+	font-family:'Yekan Bakh' !important;
 }
 
 .mini-crm-contact-form p {
@@ -22,6 +21,7 @@
     margin-bottom: 5px;
     color: #666;
     font-size: 14px;
+	font-family:'Yekan Bakh' !important;
 }
 
 .mini-crm-contact-form input[type="text"],
@@ -34,6 +34,8 @@
     background: #fff;
     box-sizing: border-box;
     transition: border-color 0.3s;
+	font-family:'Yekan Bakh' !important;
+
 }
 
 .mini-crm-contact-form input[type="text"]:focus,
@@ -58,6 +60,8 @@
     transition: background 0.3s;
     width: 100%;
     margin-top: 10px;
+	font-family:'Yekan Bakh' !important;
+
 }
 
 .mini-crm-contact-form input[type="submit"]:hover {
@@ -89,6 +93,8 @@
     font-size: 14px;
     opacity: 1;
     transition: opacity 0.3s ease;
+	font-family:'Yekan Bakh' !important;
+
 }
 
 .mini-crm-success.show {
@@ -150,4 +156,10 @@
 }
 .mini-crm-error.hide {
     opacity: 0;
+}
+
+
+.mini_crm_submit{
+	
+		font-family:'Yekan Bakh' !important;
 }

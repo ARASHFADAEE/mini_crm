@@ -450,3 +450,229 @@
 .mini-crm-search .search-icon:hover {
     background: #005177;
 }
+
+/* Responsive table styles for main contacts list */
+@media (max-width: 1200px) {
+    .mini-crm-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .contacts-table {
+        min-width: 1000px;
+    }
+    
+    .contacts-table th,
+    .contacts-table td {
+        padding: 6px 4px;
+        font-size: 12px;
+    }
+    
+    .manual-sms-actions .button {
+        padding: 2px 6px;
+        font-size: 11px;
+        margin: 1px;
+    }
+    
+    .contact-management-actions .button {
+        padding: 2px 6px;
+        font-size: 11px;
+        margin: 1px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mini-crm-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -10px;
+    }
+    
+    .contacts-table {
+        min-width: 800px;
+        font-size: 11px;
+    }
+    
+    .contacts-table th,
+    .contacts-table td {
+        padding: 4px 2px;
+        white-space: nowrap;
+    }
+    
+    .manual-sms-actions {
+        min-width: 120px;
+    }
+    
+    .manual-sms-actions .button {
+        display: block;
+        width: 100%;
+        margin: 1px 0;
+        padding: 2px 4px;
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    .contact-management-actions {
+        min-width: 80px;
+    }
+    
+    .contact-management-actions .button {
+        display: block;
+        width: 100%;
+        margin: 1px 0;
+        padding: 2px 4px;
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    .mini-crm-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .mini-crm-search,
+    .mini-crm-filter {
+        width: 100%;
+    }
+    
+    .mini-crm-filter label {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .mini-crm-filter select {
+        width: 100%;
+        margin: 2px 0;
+    }
+}
+
+/* Modal responsive styles */
+.sms-history-overlay {
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .sms-history-overlay > div {
+        max-width: 95% !important;
+        max-height: 90% !important;
+        margin: 0 auto;
+    }
+}
+
+/* Status colors */
+.status-success {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.status-error {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+/* Edit contact modal styles */
+.edit-contact-modal {
+    direction: rtl;
+    text-align: right;
+}
+
+.edit-contact-modal h3 {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-size: 18px;
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 10px;
+}
+
+.edit-form-container {
+    margin: 20px 0;
+}
+
+.edit-contact-modal .form-field {
+    margin-bottom: 20px;
+}
+
+.edit-contact-modal .form-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.edit-contact-modal .form-field input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    direction: rtl;
+}
+
+.edit-contact-modal .form-field input[type="text"]:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 5px rgba(0, 115, 170, 0.3);
+}
+
+.edit-contact-modal .form-actions {
+    margin-top: 25px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.edit-contact-modal .form-actions .button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-contact-modal .form-actions .button-primary {
+    background: #0073aa;
+    border-color: #0073aa;
+    color: white;
+}
+
+.edit-contact-modal .form-actions .button-primary:hover {
+    background: #005177;
+    border-color: #005177;
+}
+
+.edit-contact-modal .form-actions .cancel-edit {
+    background: #f1f1f1;
+    border-color: #ccc;
+    color: #333;
+}
+
+.edit-contact-modal .form-actions .cancel-edit:hover {
+    background: #e1e1e1;
+    border-color: #999;
+}
+
+/* Responsive modal */
+@media (max-width: 768px) {
+    .edit-contact-overlay > div {
+        max-width: 95% !important;
+        padding: 20px !important;
+    }
+    
+    .edit-contact-modal .form-actions {
+        text-align: center;
+    }
+    
+    .edit-contact-modal .form-actions .button {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+    }
+}

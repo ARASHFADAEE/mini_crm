@@ -1,0 +1,309 @@
+/*
+ * Persian Datepicker Styles for Mini CRM
+ */
+
+.persian-datepicker-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.persian-datepicker-container {
+    display: none;
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    min-width: 300px;
+    z-index: 9999;
+    direction: rtl;
+    font-family: 'Tahoma', sans-serif;
+}
+
+/* Calendar Header */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 5px;
+}
+
+.month-year {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    flex: 1;
+    text-align: center;
+}
+
+.year-select {
+    background: none !important;
+    border: none !important;
+    color: #333 !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    margin-right: 5px !important;
+    padding: 2px 4px !important;
+    border-radius: 3px !important;
+    font-family: 'Tahoma', sans-serif !important;
+}
+
+.year-select:hover {
+    background: #f8f9fa !important;
+}
+
+.year-select:focus {
+    outline: 2px solid #007cba !important;
+    outline-offset: 1px !important;
+}
+
+.btn-nav {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #6c757d;
+    transition: all 0.2s;
+}
+
+.btn-nav:hover {
+    background: #e9ecef;
+    color: #495057;
+    border-color: #adb5bd;
+}
+
+.btn-nav:active {
+    transform: scale(0.95);
+}
+
+/* Days Header */
+.days-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+.day-name {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #6c757d;
+    padding: 8px 4px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* Days Grid */
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.day-cell {
+    text-align: center;
+    padding: 10px 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.2s;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.day-cell:not(.empty):hover {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.day-cell.empty {
+    cursor: default;
+}
+
+.day-cell.today {
+    background: #fff3e0;
+    color: #f57c00;
+    font-weight: bold;
+    border: 1px solid #ffb74d;
+}
+
+.day-cell.selected {
+    background: #1976d2;
+    color: white;
+    font-weight: bold;
+}
+
+.day-cell.selected:hover {
+    background: #1565c0;
+}
+
+/* Time Picker */
+.time-picker {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e9ecef;
+    text-align: center;
+}
+
+.time-picker label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.time-input {
+    width: 120px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    background: #fff;
+    transition: border-color 0.2s;
+}
+
+.time-input:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+/* Visit Date Container */
+.visit-date-container {
+    min-width: 200px;
+}
+
+.visit-date-container .persian-datepicker {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.visit-date-container .persian-datepicker:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+.visit-date-container .persian-datepicker::placeholder {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.confirm-visit-datetime {
+    background: #28a745 !important;
+    color: white !important;
+    border: none !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+    font-size: 12px !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s !important;
+    margin-top: 5px !important;
+    width: 100% !important;
+}
+
+.confirm-visit-datetime:hover {
+    background: #218838 !important;
+}
+
+.confirm-visit-datetime:disabled {
+    background: #6c757d !important;
+    cursor: not-allowed !important;
+}
+
+.visit-display {
+    display: block;
+    font-size: 11px;
+    color: #6c757d;
+    margin-top: 3px;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .persian-datepicker-container {
+        min-width: 280px;
+        padding: 12px;
+    }
+    
+    .month-year {
+        font-size: 14px;
+    }
+    
+    .day-cell {
+        padding: 8px 2px;
+        font-size: 13px;
+        min-height: 28px;
+    }
+    
+    .day-name {
+        font-size: 11px;
+        padding: 6px 2px;
+    }
+    
+    .time-input {
+        width: 100px;
+        font-size: 13px;
+    }
+}
+
+/* Animation */
+.persian-datepicker-container {
+    animation: fadeInUp 0.2s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading state */
+.visit-date-container.loading .persian-datepicker {
+    background: #f8f9fa;
+    cursor: wait;
+}
+
+.visit-date-container.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #dee2e6;
+    border-top: 2px solid #1976d2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transform: translateY(-50%);
+}
+
+@keyframes spin {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    100% { transform: translateY(-50%) rotate(360deg); }
+} 
